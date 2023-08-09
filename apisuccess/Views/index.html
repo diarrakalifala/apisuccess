@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Success Bot</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/css/common-page.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/toastr.css" %}">
+    <script src="{% static "script/jquery-1.10.2.js" %}"></script>
+    <script src="{% static "script/bootstrap.min.js" %}"></script>
+    <script src="{% static "script/toastr.js" %}"></script>
+
+    <style>
+        #myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+          /*position: fixed;*/
+          bottom: 0;
+          /*background: rgba(0, 0, 0, 0.5);*/
+          color: #f1f1f1;
+          padding: 20px;
+          margin-left:15%;
+          margin-right:15%;
+        }
+    </style>
+
+      <style>
+            div.scrollab {
+                margin:5px;
+                padding:5px;
+                width: 100%;
+                max-height: 500px;
+                overflow: auto;
+            }
+     </style>
+  </head>
+
+  <body>
+
+  <!--
+    <video autoplay muted loop id="myVideo" style="">
+      <source src="{% static 'video/omc-movie.webm' %}" type="video/mp4">
+    </video>
+  -->
+
+    <div class="content">
+      <h2 style="text-align:center; color:#4badd0">
+        SuccessBot votre conseillé en gestion de projet financier..
+      </h2>
+
+        <section>
+            <div class="row">
+                <div class="col-md-1" style=""></div>
+                <div class="col-md-3" style="background-color:#ffffff; margin:1%">
+                    <br>
+                    <h4 style="text-align:center">Performance</h4>
+                    <p>
+                    Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur.
+                    </p>
+                </div>
+                <div class="col-md-3" style="background-color:#ffffff; margin:1%">
+                     <br>
+                    <h4 style="text-align:center">Technologie</h4>
+                    <p>
+                    Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur.
+                    </p>
+                </div>
+                <div class="col-md-3" style="background-color:#ffffff; margin:1%">
+                     <br>
+                    <h4 style="text-align:center">Sécurité</h4>
+                    <p>
+                    Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur.
+                    </p>
+                </div>
+                <div class="col-md-1" style=""></div>
+            </div>
+        </section>
+        <br><br>
+      <section style="background-color:white">
+          <div class="scrollab">
+
+             <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-12">
+                      <div class="row cnt" style="border:0.3px solid gray">
+                          <div class="col-md-12">
+                              <div class="row" id="MessageContent"></div>
+                          </div>
+
+                          <div class="col-md-12">
+                              <div style="height:4px"></div>
+                              <hr>
+                              <input type="text" id="Message" class="form-control" placeholder="Dites bonjour à SuccessBot...">
+                              <button class="btn btn-primary" id="Reply" style="width: 10%; background-color:#4badd0; text-transform:none; border: #4badd0">
+                                  Envoyer
+                              </button>
+                          </div>
+
+                      </div>
+                  </div>
+             </div>
+
+          </div>
+      </section>
+
+    </div>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+    </script>
+
+    <script>
+        toastr.options.positionClass = 'toast-bottom-left';
+
+        var msgText = $('#Message');
+
+        $('#Reply').click(function () {
+
+            var msg = msgText.val()
+            if (msg == '') {
+                toastr.error("Dites bonjour à Success Bot pour démarrer")
+                return;
+            }
+
+            var data = {
+                "msg": msg
+            }
+            $.ajax({
+                url: '/api',
+                data: JSON.stringify(data),
+                method: 'POST',
+                success: function (res) {
+                    drawMessage(res)
+                },
+                error: function (err) {
+                    if (err.desc == null)
+                        err.desc = "Quelque chose n'a pas fonctionné"
+                    toastr.error(err.desc)
+                }
+            })
+
+        })
+
+
+        var msgContent = $('#MessageContent');
+        function drawMessage(res) {
+            msgContent.append("<div class='col-md-6 owner-message'><p class='success-icon'> <img  class='guest-img' src='https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png'>Vous... </p><p> "+res.ques+"</p><p class='time'>"+res.time+"</p></div>");
+            msgContent.append("<div class='col-md-6 guest-message'><p class='success-icon'><img  class='guest-img' src='https://www.01net.com/app/uploads/2023/05/ia-google.jpg'> Success Bot... </p><p> "+res.res+"</p><p class='time'>"+res.time+"</p></div>")
+            msgText.val('')
+        }
+
+    </script>
+
+  </body>
+</html>

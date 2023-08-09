@@ -1,0 +1,96 @@
+
+{"intents": [
+        {"tag": "1",
+          "patterns": ["Bonjour", "Enchanté", "Salut", "Success", "Salutation", "Mes salutations", "Bonjour, comment je peux vous aidez?", "Y a-t-il quelqu'un ?", "Bonjour success", "Toc Toc"],
+         "responses": [
+           "Bonjour, bienvenue dans le logiciel incontournable SUCCESS PRO",
+          "Hey yo, tu as besoin d'aide ?",
+          "Bienvenue à bord, comment puis-je vous aider?",
+          "Ohé ! !!",
+          "Bonjour, que voulez-vous?",
+          "Bonjour mon ami, comment puis-je t'aider?",
+          "Ha, content que tu sois là. Comment allez-vous?"
+         ],
+         "context_set": ""
+        },
+        {"tag": "2",
+         "patterns": ["Merci", "Merci pour l'info", "bye bye", "byr bro", "Ok bye", "aurevoir", "A plus tard", "Je te rattraperai plus tard", "D'accord je te verrai plus tard", "Je te parlerai plus tard", "T'enverrai un texto plus tard", "Au revoir frère, je te parlerai plus tard"],
+         "responses": [
+          "Okay au revoir",
+          "Ok bye, n'oublie pas mes conseils",
+          "Passe une bonne journée",
+          "A la prochaine",
+          "aurevoir",
+          "à plus tard",
+          "bonne conversation. au revoir",
+          "OK, bonne journée",
+          "Prends soin de toi",
+          "nous nous reverrons bientôt",
+          "Ouais bien sûr, je te parlerai plus tard",
+          "D'accord, prenez soin de vous"
+         ],
+         "context_set": ""
+        },
+        {"tag": "5",
+         "patterns": ["comment vas-tu?", "je vais bien, comment vas-tu?", "tu vas bien?", "comment ça va?", "tout va bien?", "comment ça va là?", "comment ça va?", "tout va bien?"],
+         "responses": [
+           "Ouais, je vais bien",
+          "Tout se passe bien",
+          "Je fais du bien. Merci tu es mon meilleur ami",
+          "Les choses vont bien",
+          "Ouais trµès bien, il ne se passe pas grand-chose dans ma vie",
+          "Tout est très bien."
+         ],
+         "context_set": ""
+        },
+        {"tag": "6",
+         "patterns": ["qui êtes-vous?","qu'est-ce que vous êtes?","comment vous appelez-vous?","êtes-vous un chatbot?","comment puis-je vous appeler?","votre nom?", "êtes-vous un bot?","Comment m'adresser à vous?", "Comment vous appeler"],
+         "responses": [
+           "Je suis un conseiller en finance, vous pouvez m'appeler Success Bot",
+          "Je suis Success bot et vous pourriez me poser des questions sur la gestion de finance",
+          "Success bot à votre service",
+          "Je m'appelle Success bot et oui, je suis le conseiller en finance",
+          "Vous pouvez m'appeler Success bot et je suis là pour vous aider",
+          "Je m'appelle Success bot et je suis ici pour répondre à vos questions concernant la gestion de finance. Allez-y et tirez"
+         ],
+         "context_set": ""
+        },
+        {"tag": "7",
+         "patterns": ["Projet", "Je veux créer un nouveau projet", "Les étapes pour créer un projet", "Les étapes pour créer un nouveau projet", "Les étapes de création de nouveau projet", "Les étapes de création de projet", "Je veux créer un projet", "Ou créer un projet", "Comment ajouter un projet?", "Création de nouveau projet", "Nouveau projet", "Ajouter un projet", "Ajouter un nouveau projet", "Création de projet"],
+         "responses": [
+           "Voici les étapes de création d'un nouveau projet : Retenez que pour ajouter un nouveau projet, vous devez être dans un Workspace. Il fois dans votre Workspace, Cliquez sur le bouton NOUVEAU PROJET situer en haut à droite.",
+          "Dans votre Workspace Cliquez sur NOUVEAU PROJET",
+          "Voici les étapes pour ajouter un projet : \n1- Cliquez sur le bouton 'Nouveau projet' situer en haut; \n2- Renseignez le formulaire dans la fenêtre qui s'affiche\n3- Enfin cliquez sur le bouton valider pour ajouter le projet à votre Workspace",
+          "Etape 1 : Cliquez sur le bouton 'Nouveau projet' situer en haut; \nEtape 2 : Renseignez le formulaire dans la fenêtre qui s'affiche; \nEtape 3 : Enfin cliquez sur le bouton validé"
+         ],
+         "context_set": ""
+        },
+        {"tag": "8",
+         "patterns": ["Les spécifications du logiciel", "Quels sont les spécification du logiciel", "Les pécifications", "Les modules disponibles", "Quels sont les modules du logiciel", "Modules"],
+         "responses": [
+           "Le Logiciel SUCCESS est un logiciel de gestion financière comprenant tous les modules pour la gestion financière complète des projets et programmes : \n- Comptabilités Générale, Auxiliaire, Analytique et Budgétaire intégrées, \n- Gestion des Marchés et Engagements, \n- Gestion des Conventions et des Décaissements avec édition automatique des DRF sur base opérations ou base Rapports de Suivi Financier (RSF). \n- Gestion des Immobilisations, \n- Gestion de la Paie, \n- Gestion des stocks, \n- Gestion du parc automobile.  \nTéléchargez la brochure http://www.logicielsuccess.com/images/Brochure%20SUCCESS.pdf",
+          "Tous ces modules (Comptabilité, DRF, Marché, Immobilisation, Paie, Véhicule, Budget) sont totalement intégrés. Ils peuvent aussi être installés partiellement en fonction des besoins. Téléchargez la brochure http://www.logicielsuccess.com/images/Brochure%20SUCCESS.pdf"
+         ],
+         "context_set": ""
+        },
+        {"tag": "9",
+         "patterns": ["caracteristique", "caracteristiques", "Quels sont les caractéristiques du logiciel", "Les caractéristiques du logiciel", "Les caractéristiques de Success pro", "Les caractéristiques de Success", "Les caractéristiques du logiciel Success", "Les caractéristiques", "Caractéristiques"],
+         "responses": [
+           "Un logiciel complet multi-projets, multi-bailleurs, multi-devises avec tout ce qu’il faut pour la gestion financière de projets, Paramètrable, Modulable et Facile à utiliser",
+          "Success pro est un logiciel Paramètrable, Modulable et Facile à utiliser",
+          "Paramètrable, Modulable et Facile à utiliser"
+         ],
+         "context_set": ""
+        },
+        {"tag": "10",
+         "patterns": ["d'où viens-tu?", "de quel pays viens-tu?", "où vis-tu?", "où es-tu?", "où habites-tu?", "où habitez-vous actuellement", "où habitez-vous actuellement?", "vous venez d'où", "vous venez?"],
+         "responses": [
+           "Je vis partout",
+          "Je mets les voiles vers la grande ligne",
+          "Je vis à partout. Je suis sûr que vous n'en avez pas entendu parler",
+          "Partout. C'est là que j'habite"
+         ],
+         "context_set": ""
+        }
+   ]
+}
